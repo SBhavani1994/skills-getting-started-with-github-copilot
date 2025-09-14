@@ -76,7 +76,7 @@ activities = {
         "description": "Conduct experiments and explore scientific concepts",
         "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
         "max_participants": 14,
-        "participants": ["elijah@mergington.edu", "harper@mergington.edu"]
+        "participants": ["elija@mergington.edu", "harper@mergington.edu"]
     }
 }
 
@@ -89,7 +89,6 @@ def root():
 @app.get("/activities")
 def get_activities():
     return activities
-
 
 @app.post("/activities/{activity_name}/signup")
 def signup_for_activity(activity_name: str, email: str):
