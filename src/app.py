@@ -90,6 +90,18 @@ def root():
 def get_activities():
     return activities
 
+def commit_changes(message):
+    subprocess.run(["git", "add", "."], check=True)
+    # Check if there are staged changes before committing
+    result = subprocess.run(
+        ["git", "diff", "--cached", "--quiet"],
+        check=False
+    )
+    if result.returncode == 0:
+        print("No changes to commit.")
+        return
+    subprocess.run(["git", "commit", "-m", message], check=True)
+
 @app.post("/activities/{activity_name}/signup")
 def signup_for_activity(activity_name: str, email: str):
     """Sign up a student for an activity"""
