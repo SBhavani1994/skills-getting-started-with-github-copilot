@@ -50,7 +50,7 @@ activities = {
         "description": "Practice basketball skills and play friendly games",
         "schedule": "Tuesdays, 5:00 PM - 6:30 PM",
         "max_participants": 15,
-        "participants": ["liam@mergington.edu", "ava@mergington.edu"]
+        "participants": ["liam@mergington.edu", "avamaria@mergington.edu"]
     },
     # Artistic activities
     "Art Club": {
